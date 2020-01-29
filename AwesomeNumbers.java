@@ -9,7 +9,7 @@ public class AwesomeNumbers {
         //System.out.println(awesomeCheck(20, 2));
         System.out.print("{ ");
 
-        for(long i = 10; i <= 10000000; i++) {
+        for(long i = 10; i <= 10000000; i++) { //From integers 10 to 10,000,000
             int digits = totalDigits(i);
 
             awesome = awesomeCheck(i, digits);
@@ -21,6 +21,11 @@ public class AwesomeNumbers {
         System.out.print("}");
     }
 
+    /**
+     * Finds the total number of digits in an integer.
+     * @param num
+     * @return The total number of digits
+     */
     public static int totalDigits(long num) {
         int count = 0;
         while(num != 0) {
@@ -31,6 +36,11 @@ public class AwesomeNumbers {
         return count;
     }
 
+    /**
+//     * Returns the factorial of a number.
+     * @param num The desired number to use a factorial on
+     * @return The factorial
+     */
     public static long factorial(long num) {
         long total = num;
 
@@ -41,6 +51,13 @@ public class AwesomeNumbers {
         return total;
     }
 
+    /**
+     * Checks if a number is awesome, e.g.: the sum of its digits factorials is equal to the number itself.
+     * EX: 1! + 4! + 5! == 145, so 145 is an awesome number.
+     * @param num
+     * @param totalDigits
+     * @return true if awesome, false if not
+     */
     public static boolean awesomeCheck(long num, int totalDigits) {
 
         String temp = Long.toString(num); //Convert int to String
