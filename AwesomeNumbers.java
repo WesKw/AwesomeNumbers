@@ -28,6 +28,7 @@ public class AwesomeNumbers {
      */
     public static int totalDigits(long num) {
         int count = 0;
+
         while(num != 0) {
             num = num / 10;
             count++;
@@ -43,6 +44,9 @@ public class AwesomeNumbers {
      */
     public static long factorial(long num) {
         long total = num;
+
+        if(num == 0)
+            return 1;
 
         for(long i = num - 1; i > 0; i--) {
             total *= i;
